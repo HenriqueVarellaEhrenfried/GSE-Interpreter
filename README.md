@@ -1,52 +1,47 @@
 # Project structure
 ```
-Grammar_GSE/
+GSE-Interpreter
 ├── Code
-│   ├── GSE
-│   │   ├── examples
-│   │   │   ├── example2.feature
-│   │   │   ├── example.feature
-│   │   │   ├── example.feature.dot
-│   │   │   ├── example.hello
-│   │   │   └── example.hello.dot
-│   │   ├── grammar
-│   │   │   ├── Gramática.png
-│   │   │   ├── gse.tx
-│   │   │   └── gse.tx.dot
-│   │   ├── Modelagem.md
-│   │   ├── README.md
-│   │   ├── requirements.txt
-│   │   └── src
-│   │       ├── actions.py
-│   │       ├── gse.py
-│   │       ├── manage.py
-│   │       └── __pycache__
-│   │           ├── actions.cpython-37.pyc
-│   │           └── gse.cpython-37.pyc
-│   └── questionnaire
-│       ├── package.json
-│       ├── package-lock.json
-│       ├── public
-│       │   ├── favicon.ico
-│       │   ├── index.html
-│       │   └── manifest.json
-│       ├── README.md
-│       └── src
-│           ├── App.css
-│           ├── App.js
-│           ├── App.test.js
-│           ├── environment.js
-│           ├── i18n.js
-│           ├── index.css
-│           ├── index.js
-│           ├── logo.svg
-│           ├── Pages
-│           │   └── Questionnaire.js
-│           └── registerServiceWorker.js
+│   └── GSE
+│       ├── Example
+│       │   └── features
+│       │       ├── Allow_student_request.feature
+│       │       ├── Display_request_status.feature
+│       │       ├── Show_curricular_grade.feature
+│       │       ├── Show_discipline_status.feature
+│       │       ├── Student_adjust_aplication.feature
+│       │       ├── Student_fill_intership_documents.feature
+│       │       ├── Student_register_aplication.feature
+│       │       └── steps
+│       │           └── Test_Definition.py
+│       ├── README.md
+│       ├── grammar
+│       │   ├── Gramática.png
+│       │   ├── gse.tx
+│       │   └── gse.tx.dot
+│       ├── requirements.txt
+│       └── src
+│           ├── Report
+│           │   ├── Logo-Mestrado.png
+│           │   ├── Report.html
+│           │   ├── config.json
+│           │   ├── metrics.json
+│           │   └── ufpr_alta.jpg
+│           ├── __pycache__
+│           │   ├── actions.cpython-37.pyc
+│           │   ├── doc_gen.cpython-37.pyc
+│           │   └── gse.cpython-37.pyc
+│           ├── actions.py
+│           ├── doc_gen.py
+│           ├── gse.py
+│           ├── manage.py
+│           └── template
+│               └── Report.html
 ├── Docs
-│   └── Formato GSE.txt
-├── LICENSE
-└── README.md
+│   └── Formato GSE.txt
+├── LICENSE.txt
+├── README.md
+└── install_depedencies_ubuntu.sh
 ```
 
 The directory `Code` there is all the code for this project: the grammar, tests 
