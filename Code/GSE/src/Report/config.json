@@ -1,0 +1,8 @@
+{
+    "Institution Name": "UFPR - Universidade Federal do Parana",
+    "Institution Logo": "./ufpr_alta.jpg",
+    "Project Name": "GSE - Gherkin Specification Language",
+    "Project Logo": "./Logo-Mestrado.png",
+    "Project version": "1",
+    "Project description": ["This projects aims in implements a languange that is capable of specify software in a way that anyone can read and understand.","Another interesting feature is the capacity of generate documantion with a single command"]
+}

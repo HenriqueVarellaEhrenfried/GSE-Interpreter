@@ -1,0 +1,9 @@
+textX
+pylint
+pandas
+pytest
+graphviz
+manage.py
+Jinja2
+WeasyPrint
+behave

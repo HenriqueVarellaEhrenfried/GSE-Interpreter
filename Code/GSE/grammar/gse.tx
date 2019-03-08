@@ -1,0 +1,121 @@
+//---------------------------------------------------------------------------------------------
+//   Copyright (c) Henrique Varella Ehrenfried. All rights reserved.
+//   Licensed under the MIT License. See License.txt in the project root for license information.
+//---------------------------------------------------------------------------------------------
+
+//noskipws: Do not skip whitespaces. by default textX skips whitespaces 
+
+
+
+GSE_MODEL[noskipws]:
+    'Feature:' Feature=WORD_WITH_SPACE NEWLINE
+    Description=DESCRIPTION? 
+    (
+        Group=GROUP? 
+        Constraints=CONSTRAINTS? 
+        Relationship=RELATIONSHIP? 
+        Planning=PLANNING?
+        Metrics=METRICS?
+    )#
+    Notes=NOTES?
+    Cucumber=START_CUCUMBER?
+;
+DESCRIPTION[noskipws]:
+    'Description:' NEWLINE
+    'As' Stakeholder=TEXT NEWLINE 
+    ('Or' Stakeholder+=TEXT NEWLINE)* 
+    'I want to' Action=TEXT NEWLINE
+    'So that I' Motivation=TEXT NEWLINE
+;
+GROUP[noskipws]:
+    'Group:' NEWLINE
+    Groups+=GROUP_TAG+ NEWLINE
+;
+CONSTRAINTS[noskipws]:
+    'Constraints and Qualities:' NEWLINE
+    ('The requirement should implement:' NEWLINE Qualities+=ITEM+ NEWLINE)?
+    ('The actor should not be able to:' NEWLINE Constraints+=ITEM+ NEWLINE)?
+;
+RELATIONSHIP[noskipws]:
+    'Relationship:' NEWLINE
+    'This requirement is:' NEWLINE
+    (
+        ('* Derived from requirement(s)' SPACE Derived=REQUIREMENT_LIST NEWLINE)?
+        ('* Contained in requirement(s)' SPACE Contains=REQUIREMENT_LIST NEWLINE)?
+        ('* A copy of the requirement(s)' SPACE Copy=REQUIREMENT_LIST NEWLINE)?
+        ('* A refinament of the requirement(s)' SPACE Refinament=REQUIREMENT_LIST NEWLINE)?
+        ('* Dependent on requirement(s)' SPACE Dependent=REQUIREMENT_LIST NEWLINE)?
+    )#
+;
+PLANNING[noskipws]:
+    'Planning:' NEWLINE
+    'This requirement will be implemented' SPACE Order=ORDINAL_NUM SPACE 
+    'and will take' SPACE Time_needed=TIME SPACE
+    'to be implemented by' SPACE Num_of_developers=/\d+/ SPACE 'developer(s).' NEWLINE
+    'The developer(s) responsible for implementing this requirement is/are' SPACE Developers+=WORD_WITH_SPACE[','] SPACE '.' NEWLINE
+    'The sprint that will implement this feature is:' SPACE Sprint=WORD_WITH_SPACE SPACE '.' NEWLINE
+;
+METRICS[noskipws]:
+    'Metrics:' NEWLINE
+    'The metrics used to evaluate this requirement are:' NEWLINE
+    (Metric_item+=METRIC_ITEM)+ NEWLINE
+;
+NOTES[noskipws]:
+    'Notes:' NEWLINE
+    (Note+=TEXT NEWLINE)+
+;
+
+START_CUCUMBER[noskipws]:
+    'Scenario:'? 'Background:'? 'Scenario Outline'? 'Example:'? 'Examples:'? (ANYTHING* NEWLINE*)* 
+;
+ANYTHING[noskipws]:
+    /(.*)*/
+;
+GROUP_TAG[noskipws]:
+    // (Tag+=WORD* NEWLINE | ('[' Tag+=WORD_WITH_SPACE ']')* NEWLINE)*
+    Tag+=WORD_WITH_SPACE[',']
+;
+METRIC_ITEM[noskipws]:
+    '*' SPACE Metric+=WORD_WITH_SPACE SPACE ';' NEWLINE ('The expected value is at least' SPACE Expected_Value+=WORD_WITH_SPACE NEWLINE)?
+;
+TIME[noskipws]:
+    /\d*/ SPACE TIME_UNIT
+;
+TIME_UNIT[noskipws]:
+    ('second' | 'seconds' | 'minute' | 'minutes' | 'hours' | 'hours' | 'day' | 'days' | 'week' | 'weeks' | 'month' | 'months' | 'year' | 'years')
+;
+ORDINAL_NUM[noskipws]:
+    /\d*/('st' | 'nd' | 'rd' | 'th')
+;
+REQUIREMENT_LIST[noskipws]:
+    Requirement+=WORD_WITH_SPACE[',']
+;
+WORD_WITH_SPACE[noskipws]:
+    /[\w*\'* ]*/
+;
+ITEM[noskipws]:
+    '*' SPACE Item+=TEXT NEWLINE Subitem+=SUBITEM?
+;
+SUBITEM[noskipws]:
+    '>' SPACE Subitem+=TEXT NEWLINE SUBITEM?
+;
+TEXT[noskipws]:
+    /[^\r\n\[\]]*/
+;
+WORD[noskipws]:
+    /(\w)*/
+;
+NEWLINE[noskipws]:
+    /[\r\n\t ]*/
+;
+SPACE[noskipws]:
+    /[\t ]*/
+;
+//-----EXEMPLO-----
+// HelloWorldModel:
+//   'hello' to_greet+=Who[',']
+// ;
+
+// Who:
+//   name = /[^,]*/
+// ;

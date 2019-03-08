@@ -1,0 +1,101 @@
+
+    digraph xtext {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+54165552 -> 54144280[arrowtail=diamond, dir=both, headlabel="Description "]
+54165552 -> 56627248[arrowtail=diamond, dir=both, headlabel="Group "]
+54165552 -> 56628664[arrowtail=diamond, dir=both, headlabel="Constraints "]
+54165552 -> 56630080[arrowtail=diamond, dir=both, headlabel="Relationship "]
+54165552 -> 56664584[arrowtail=diamond, dir=both, headlabel="Planning "]
+54165552 -> 54141448[arrowtail=diamond, dir=both, headlabel="Metrics "]
+54165552 -> 56664112[arrowtail=diamond, dir=both, headlabel="Notes "]
+54165552[ label="{GSE_MODEL|+Feature:WORD_WITH_SPACE\l+Cucumber:START_CUCUMBER\l}"]
+
+54144280[ label="{DESCRIPTION|+Stakeholder:list[TEXT]\l+Action:TEXT\l+Motivation:TEXT\l}"]
+
+56627248 -> 56689632[arrowtail=diamond, dir=both, headlabel="Groups 1..*"]
+56627248[ label="{GROUP|}"]
+
+56628664 -> 56666944[arrowtail=diamond, dir=both, headlabel="Qualities 1..*"]
+56628664 -> 56666944[arrowtail=diamond, dir=both, headlabel="Constraints 1..*"]
+56628664[ label="{CONSTRAINTS|}"]
+
+56630080 -> 56717832[arrowtail=diamond, dir=both, headlabel="Derived "]
+56630080 -> 56717832[arrowtail=diamond, dir=both, headlabel="Contains "]
+56630080 -> 56717832[arrowtail=diamond, dir=both, headlabel="Copy "]
+56630080 -> 56717832[arrowtail=diamond, dir=both, headlabel="Refinament "]
+56630080 -> 56717832[arrowtail=diamond, dir=both, headlabel="Dependent "]
+56630080[ label="{RELATIONSHIP|}"]
+
+56664584[ label="{PLANNING|+Order:ORDINAL_NUM\l+Time_needed:TIME\l+Num_of_developers:STRING\l+Developers:list[WORD_WITH_SPACE]\l+Sprint:WORD_WITH_SPACE\l}"]
+
+54141448 -> 56691048[arrowtail=diamond, dir=both, headlabel="Metric_item 1..*"]
+54141448[ label="{METRICS|}"]
+
+56664112[ label="{NOTES|+Note:list[TEXT]\l}"]
+
+56666000[ label="{START_CUCUMBER|Scenario:\? Background:\? Scenario Outline\? Example:\? Examples:\? (((.*)*)* ([\\r\\n\\t ]*)*)*}"]
+
+56667416[ label="{ANYTHING|(.*)*}"]
+
+56689632[ label="{GROUP_TAG|+Tag:list[WORD_WITH_SPACE]\l}"]
+
+56691048[ label="{METRIC_ITEM|+Metric:list[WORD_WITH_SPACE]\l+Expected_Value:list[WORD_WITH_SPACE]\l}"]
+
+56696880[ label="{TIME|\\d* [\\t ]* second\|seconds\|minute\|minutes\|hours\|hours\|day\|days\|week\|weeks\|month\|months\|year\|years}"]
+
+56698296[ label="{TIME_UNIT|second\|seconds\|minute\|minutes\|hours\|hours\|day\|days\|week\|weeks\|month\|months\|year\|years}"]
+
+56699712[ label="{ORDINAL_NUM|\\d* st\|nd\|rd\|th}"]
+
+56717832[ label="{REQUIREMENT_LIST|+Requirement:list[WORD_WITH_SPACE]\l}"]
+
+56691992[ label="{WORD_WITH_SPACE|[\\w*\\'* ]*}"]
+
+56666944 -> 56628192[arrowtail=diamond, dir=both, headlabel="Subitem 1..*"]
+56666944[ label="{ITEM|+Item:list[TEXT]\l}"]
+
+56628192[ label="{SUBITEM|+Subitem:list[TEXT]\l}"]
+
+56718776[ label="{TEXT|[^\\r\\n\\[\\]]*}"]
+
+56720192[ label="{WORD|(\\w)*}"]
+
+56734216[ label="{NEWLINE|[\\r\\n\\t ]*}"]
+
+56735632[ label="{SPACE|[\\t ]*}"]
+
+54141920[ label="{ID|}"]
+
+54143336[ label="{STRING|}"]
+
+54153264[ label="{BOOL|}"]
+
+54154680[ label="{INT|}"]
+
+54156096[ label="{FLOAT|}"]
+
+54166024[ label="{NUMBER|}"]
+54166024 -> 54156096 [dir=back]
+54166024 -> 54154680 [dir=back]
+
+54167440[ label="{BASETYPE|}"]
+54167440 -> 54166024 [dir=back]
+54167440 -> 54153264 [dir=back]
+54167440 -> 54141920 [dir=back]
+54167440 -> 54143336 [dir=back]
+
+54168856[ label="{*OBJECT|}"]
+54168856 -> 54167440 [dir=back]
+
+
+}

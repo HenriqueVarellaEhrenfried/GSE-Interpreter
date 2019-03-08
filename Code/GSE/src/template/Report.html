@@ -1,0 +1,105 @@
+ <!-- ---------------------------------------------------------------------------------------------
+   Copyright (c) Henrique Varella Ehrenfried. All rights reserved.
+   Licensed under the MIT License. See License.txt in the project root for license information.
+ --------------------------------------------------------------------------------------------- -->
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <title>Report</title>
+</head>
+<body>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        .spacing-bottom{
+            margin-bottom: 220px;
+        }
+        .features{
+            border: 1px solid #797979;
+            padding: 20px;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            white-space: pre-wrap;    
+            white-space: -moz-pre-wrap;  
+            white-space: -pre-wrap;     
+            white-space: -o-pre-wrap;   
+            word-wrap: break-word; 
+        }
+
+    </style>
+    
+
+    <div class="row">
+        <div class="col s12">
+            <div class="card ">
+                <div class="card-content">  
+                    <img class='center' src={{institution_logo}} style="max-width: 150px; max-height: 150px;"/>
+                    <h5 class='center spacing-bottom'>{{institution}}</h5>      
+                    <img class='center' src={{project_logo}} style="max-width: 150px; max-height: 150px;"/>
+                    <h5 class='center spacing-bottom'>{{project}}</h5>     
+                    <span class='center'>Project Version: {{version}}</span>
+                    <span class='center'>{{date}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="card ">
+                <div class="card-content">  
+                    <h5>Description</h5>
+                    {{description}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="card ">
+                <div class="card-content">  
+                    <h5 >Project data</h5>   
+                    <p><b>Number of requirements:</b>{{num_req}}</p>
+                    <p><b>Number of actors:</b>{{num_actor}}</p>
+                    <p><b>Actor list:</b>{{actors}}</p>
+                    <p><b>Number of actor occurances:</b>{{actor_occ}}</p>
+                    <p><b>Number of developers:</b>{{num_developers}}</p>
+                    <p><b>Developers:</b>{{developers}}</p>
+                    <p><b>Number of developer occurances:</b>{{occ_developers}}</p>
+                    <p><b>Estimated project time:</b>{{estimate_time}}</p>
+                    <p><b>Number of sprints:</b>{{num_sprints}}</p>
+                    <p><b>Number of requirements by group:</b>{{num_req_group}}</p>
+                    <p><b>Dependency graph:</b></p><p><b>Note:</b> The edges in red have a special meaning - The node in its head depends on the node in its tail</p><img class='center' src={{pert}} style=""/>
+                </div>           
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="card ">
+                <div class="card-content">
+                    <h5>Metrics</h5>
+                    {{metrics}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="card ">
+                <div class="card-content">  
+                    <h5>Requirements</h5>
+                    {{requirements}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

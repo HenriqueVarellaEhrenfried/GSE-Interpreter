@@ -1,0 +1,14 @@
+[
+    {
+        "acronym":"LOC",
+        "name":"Lines of Code",
+        "how it works":"It's the number of lines used to program a feature. Comments and empty lines are not accounted",
+        "interpretation":"The lower the number the complexer it gets to understand the code"
+    },
+    {
+        "acronym":"FEAT_CMP",
+        "name":"Feature Complexity",
+        "how it works":"It is a number between 0 and 5 that express the complexity of the feature in terms of understandability",
+        "interpretation":"The bigger the number the complexer it is to understand the feature"
+    }
+]

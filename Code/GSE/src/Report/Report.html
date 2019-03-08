@@ -1,0 +1,320 @@
+ <!-- ---------------------------------------------------------------------------------------------
+   Copyright (c) Henrique Varella Ehrenfried. All rights reserved.
+   Licensed under the MIT License. See License.txt in the project root for license information.
+ --------------------------------------------------------------------------------------------- -->
+
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <title>Report</title>
+</head>
+<body>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        .spacing-bottom{
+            margin-bottom: 220px;
+        }
+        .features{
+            border: 1px solid #797979;
+            padding: 20px;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            white-space: pre-wrap;    
+            white-space: -moz-pre-wrap;  
+            white-space: -pre-wrap;     
+            white-space: -o-pre-wrap;   
+            word-wrap: break-word; 
+        }
+
+    </style>
+    
+
+    <div class="row">
+        <div class="col s12">
+            <div class="card ">
+                <div class="card-content">  
+                    <img class='center' src=./ufpr_alta.jpg style="max-width: 150px; max-height: 150px;"/>
+                    <h5 class='center spacing-bottom'>UFPR - Universidade Federal do Parana</h5>      
+                    <img class='center' src=./Logo-Mestrado.png style="max-width: 150px; max-height: 150px;"/>
+                    <h5 class='center spacing-bottom'>GSE - Gherkin Specification Language</h5>     
+                    <span class='center'>Project Version: 1</span>
+                    <span class='center'>September 14, 2018</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="card ">
+                <div class="card-content">  
+                    <h5>Description</h5>
+                    <p>This projects aims in implements a languange that is capable of specify software in a way that anyone can read and understand.</p>
+<p>Another interesting feature is the capacity of generate documantion with a single command</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="card ">
+                <div class="card-content">  
+                    <h5 >Project data</h5>   
+                    <p><b>Number of requirements:</b><p>7</p>
+</p>
+                    <p><b>Number of actors:</b><p>1</p>
+</p>
+                    <p><b>Actor list:</b><p>a student</p>
+</p>
+                    <p><b>Number of actor occurances:</b><table class='striped container'>
+<tr>
+	<th>Actor</th>
+	<th>Number of occurences</th></tr>
+<tr>
+	<td>a student</td>
+	<td>7</td></tr>
+</table></p>
+                    <p><b>Number of developers:</b><p>3</p>
+</p>
+                    <p><b>Developers:</b><p>Mariah Cash, Mario Ferraruci, Josh Von Neuer</p>
+</p>
+                    <p><b>Number of developer occurances:</b><table class='striped container'>
+<tr>
+	<th>Developer</th>
+	<th>Number of occurences</th></tr>
+<tr>
+	<td>Mariah Cash</td>
+	<td>5</td></tr>
+<tr>
+	<td>Mario Ferraruci</td>
+	<td>1</td></tr>
+<tr>
+	<td>Josh Von Neuer</td>
+	<td>1</td></tr>
+</table></p>
+                    <p><b>Estimated project time:</b><p>84.0 hours</p>
+</p>
+                    <p><b>Number of sprints:</b><p>3</p>
+</p>
+                    <p><b>Number of requirements by group:</b><table class='striped container'>
+<tr>
+	<th>Group</th>
+	<th>Number of occurences</th></tr>
+<tr>
+	<td>Visualizator</td>
+	<td>2</td></tr>
+<tr>
+	<td>Request</td>
+	<td>2</td></tr>
+<tr>
+	<td>Intership</td>
+	<td>1</td></tr>
+<tr>
+	<td>Ajustinator</td>
+	<td>1</td></tr>
+<tr>
+	<td>Matriculator</td>
+	<td>1</td></tr>
+</table></p>
+                    <p><b>Dependency graph:</b></p><p><b>Note:</b> The edges in red have a special meaning - The node in its head depends on the node in its tail</p><img class='center' src=../../PERT.gv.png style=""/>
+                </div>           
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="card ">
+                <div class="card-content">
+                    <h5>Metrics</h5>
+                    <table class='striped container'>
+<tr>
+	<th>Acronym</th>
+	<th>Name</th>
+	<th>How it works</th>
+	<th>Interpretation</th></tr>
+<tr>
+	<td>LOC</td>
+	<td>Lines of Code</td>
+	<td>It's the number of lines used to program a feature. Comments and empty lines are not accounted</td>
+	<td>The lower the number the complexer it gets to understand the code</td></tr>
+<tr>
+	<td>FEAT_CMP</td>
+	<td>Feature Complexity</td>
+	<td>It is a number between 0 and 5 that express the complexity of the feature in terms of understandability</td>
+	<td>The bigger the number the complexer it is to understand the feature</td></tr>
+</table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="card ">
+                <div class="card-content">  
+                    <h5>Requirements</h5>
+                    
+<div class='features-section'>
+	<pre class=features>Feature: Allow student's request
+
+Description:
+    As a student
+    I want to make a request
+    So that I can improve my academic life
+
+Group: Request
+
+Constraints and Qualities:
+    The requirement should implement:
+    * A way to send requests to the course coordinator
+
+Planning:
+    This requirement will be implemented 6th and will take 6 hours to be implemented by 1 developer(s). The developer(s) responsible for implementing this requirement is/are Mariah Cash. The sprint that will implement this feature is: 3.
+
+Scenario: Student request is successfully accepted
+    Given that I am making a request 
+    When I submit the request
+    Then the system should display a success message
+    And send the my request to the server   
+
+Scenario: Student request is not accepted
+    Given that I am making a request 
+    When I submit the request
+    Then the system should display a submit error message
+    And do not send the request to the server </pre>
+	<pre class=features>Feature: Display request status
+
+Description:
+    As a student
+    I want to watch my request
+    So that I can know is happening with my request
+
+Group: Request
+
+Relationship:
+    This requirement is:
+    * Dependent on requirement(s) Allow student's request
+
+Planning:
+    This requirement will be implemented 7th and will take 6 hours to be implemented by 1 developer(s). The developer(s) responsible for implementing this requirement is/are Mariah Cash. The sprint that will implement this feature is: 3.
+
+Background: I am logged in
+Given that I have made my login</pre>
+	<pre class=features>Feature: Show curricular grade
+
+Description:
+    As a student
+    I want to view my status in course
+    So that I can organize my activities for the next period
+
+Group: Visualizator
+
+Constraints and Qualities:
+    The requirement should implement:
+    * A mechanism that colors the discipline according to its status:
+        > Green: if the student is approved in the discipline
+        > Red: if the student is repproved in the discipline
+        > Blue: if the student is enrolled in the discipline
+        > Orange: if the student did not enrolled the discipline
+
+Planning:
+    This requirement will be implemented 4th and will take 12 hours to be implemented by 1 developer(s). The developer(s) responsible for implementing this requirement is/are Mario Ferraruci. The sprint that will implement this feature is: 1.
+
+  </pre>
+	<pre class=features>Feature: Show discipline status
+
+Description:
+    As a student
+    I want to view my status in a discipline
+    So that I can know which disciplines I need to work harder
+
+Group: Visualizator
+
+Constraints and Qualities:
+    The requirement should implement:
+    * Show, when selected, the information about a coursed discipline. The informations that need to be shown are grande and frequency
+
+Relationship:
+    This requirement is:
+    * Dependent on requirement(s) Show curricular grade
+
+Planning:
+    This requirement will be implemented 5th and will take 12 hours to be implemented by 1 developer(s). The developer(s) responsible for implementing this requirement is/are Mariah Cash. The sprint that will implement this feature is: 3.
+
+  </pre>
+	<pre class=features>Feature: Allow student adjust application
+
+Description:
+    As a student
+    I want to adjust my application
+    So that I can optimize the disciplines I will take
+
+Group: Ajustinator
+
+Constraints and Qualities:
+    The requirement should implement:
+    * A way to allow the student to cancel a discipline
+    The actor should not be able to:
+    * Adjust an aplication for disciplines if:
+        > The discipline was already taken
+        > The new discipline schedule's conflicts with the student schedule
+        > Any prerequisite is not fulfilled
+
+Planning:
+    This requirement will be implemented 2nd and will take 20 hours to be implemented by 1 developer(s). The developer(s) responsible for implementing this requirement is/are Mariah Cash. The sprint that will implement this feature is: 2.
+
+  </pre>
+	<pre class=features>Feature: Allow student fill intership documents
+
+Description:
+    As a student
+    I want to fill my intership documents
+    So that I can formalize my intership
+
+Group: Intership
+
+Constraints and Qualities:
+    The requirement should implement:
+        * A way to upload intership documents to COE
+    The actor should not be able to:
+        * Register the intership without the validation of COE (Comissão Orientadora de Estágios)
+
+Planning:
+    This requirement will be implemented 3rd and will take 8 hours to be implemented by 1 developer(s). The developer(s) responsible for implementing this requirement is/are Josh Von Neuer. The sprint that will implement this feature is: 2.
+
+  </pre>
+	<pre class=features>Feature: Allow student register application
+Description:
+    As a student
+    I want to register my application
+    So that I can study in the following period
+
+Group: Matriculator
+
+Constraints and Qualities:
+    The actor should not be able to:
+    * Register an application if:
+        > A discipline was already taken
+        > The new discipline has schedule conflict
+        > Any prerequisite is not fulfilled
+
+Planning:
+    This requirement will be implemented 1st and will take 20 hours to be implemented by 1 developer(s). The developer(s) responsible for implementing this requirement is/are Mariah Cash. The sprint that will implement this feature is: 1.
+
+
+</pre>
+<div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

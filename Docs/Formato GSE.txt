@@ -1,0 +1,44 @@
+Description:
+    As [SOMEONE]
+    Or [SOMEONE ELSE]
+    I want to [DO SOMETHING]
+    So that I [CAN ACHIEVE SOMETHING]
+
+Group:
+    [TAGS] [item, item 2, item com espaço 3, item 4]
+
+Constraints and Qualities:
+    The requirement should implement:
+    * [QUALITY]
+    * [QUALITY]
+
+    I should not be able to :
+    * [CONSTRAINT] if:
+        > [SUB CONSTRAINT]
+                .
+                .
+                .
+        > [SUB CONSTRAINT]
+    * [CONSTRAINT]
+
+Relationship:
+    This requirement is:
+    * Derived from requirement(s) [REQUIREMENT LIST]
+    * Contained in requirement(s) [REQUIREMENT LIST]
+    * A copy of the requirement(s) [REQUIREMENT LIST]
+    * A refinament of the requirement(s) [REQUIREMENT LIST]
+    * Dependent on requirement(s) [REQUIREMENT LIST]
+
+Planning:
+    This requirement will be implemented [REQUIREMENT ORDER] and will take [TIME] to be implemented by [NUMBER OF DEVELOPERS] developer(s). The developer(s) responsible for implementing this requirement is/are [DEVELOPER NAMES]. The sprint the will implement this feature is: [SPRINT]. 
+
+Metrics:
+    The metrics used to evaluate this requirement are:
+    * [METRIC ABBREVIATION]; The expected value is at least [EXPECTED VALUE] 
+                                    .
+                                    .
+                                    .
+    * [METRIC ABBREVIATION]; The expected value is at least [EXPECTED VALUE] 
+
+Notes:
+    [ANYTHING USER WANTS TO WRITE]
