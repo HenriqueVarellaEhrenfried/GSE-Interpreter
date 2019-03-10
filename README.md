@@ -93,9 +93,9 @@ Please use virtualenv as described above.
 
 ## Help section
 
-Docs for textX: http://www.igordejanovic.net/textX/grammar/
+Docs for textX: http://textx.github.io/textX/stable/grammar/
 
-Grammar: http://www.igordejanovic.net/textX/grammar/
+Grammar: http://textx.github.io/textX/stable/grammar/
 
 
-Hello World: http://www.igordejanovic.net/textX/tutorials/hello_world/
+Hello World: http://textx.github.io/textX/stable/tutorials/hello_world/
