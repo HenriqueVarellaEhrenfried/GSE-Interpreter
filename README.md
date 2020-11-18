@@ -1,3 +1,7 @@
+# Master's Thesis
+
+This work was presented as a Master's Thesis. The thesis was written in brazilian portuguese and is available at: https://acervodigital.ufpr.br/handle/1884/60248
+
 # Project structure
 ```
 GSE-Interpreter
